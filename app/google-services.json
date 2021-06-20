@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "589757913856",
+    "project_id": "financial-management-8b64f",
+    "storage_bucket": "financial-management-8b64f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589757913856:android:c74b227d218ee7e625b1e5",
+        "android_client_info": {
+          "package_name": "br.unifor.financialmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589757913856-t4hc4nnd9b085uo0rs82ln55p773oa39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD90W6Ng70dI4Z8RjJdDlvxeVw8ku2BtUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589757913856-t4hc4nnd9b085uo0rs82ln55p773oa39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
