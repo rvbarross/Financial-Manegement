@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.View
+import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.unifor.financialmanagement.R
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var recyclerViewExpense :RecyclerView
     private lateinit var listRecipe :ArrayList<Recipe>
     private lateinit var listExpense :ArrayList<Expense>
+    private lateinit var progressBar :ProgressBar
     private lateinit var database :FirebaseDatabase
     private lateinit var auth :FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         recyclerViewRecipe = findViewById(R.id.activity_main_recyclerview_recipe)
         recyclerViewExpense = findViewById(R.id.activity_main_recyclerview_expense)
+        progressBar = findViewById(R.id.progressBar)
 
     }
 
@@ -47,8 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onStart()
         val queryRecipe = database.reference.child("user/${auth.uid}/recipe").orderByKey()
         val queryExpense = database.reference.child("user/${auth.uid}/expense").orderByKey()
-        Log.i("Caralho", "pqp")
-
+        progressBar.visibility = View.VISIBLE
         val handler = Handler(Looper.getMainLooper())
 
         queryRecipe.addValueEventListener(object :ValueEventListener{
@@ -91,6 +93,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         layoutManager = LinearLayoutManager(applicationContext)
                     }
                 }
+                progressBar.visibility = View.GONE
             }
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")

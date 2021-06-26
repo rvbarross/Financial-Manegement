@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.unifor.financialmanagement.R
+import br.unifor.financialmanagement.activity.RegisterRecipeOrExpense
 import br.unifor.financialmanagement.model.Expense
 import br.unifor.financialmanagement.model.Recipe
 
